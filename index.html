@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+    <script>
+     window.addEventListener("load", init, false);
+     function init(){
+         document.querySelector('.block').onmousemove = function(event) {
+    event = event || window.event; // кроссбраузерность
+    console.log(event); // вывод в консоль
+    document.querySelector('.x').innerHTML = event.offsetX;
+    document.querySelector('.y').innerHTML = event.offsetY;
+console.log(event.offsetX);
+}
+let point_Germany=document.getElementById("point_Germany");
+let info_Germany=document.getElementById('info_germany');
+let point_Poland=document.getElementById("point_Poland");
+let info_Poland=document.getElementById("info_Poland");
+let point_Spain=document.getElementById("point_Spain");
+let info_Spain=document.getElementById("info_Spain");
+let point_Italy=document.getElementById("point_Italy");
+let info_Italy=document.getElementById("info_Italy");
+let point_Bulgaria=document.getElementById("point_Bulgaria");
+let info_Bulgaria=document.getElementById("info_Bulgaria");
+
+
+point_Germany.onmouseover=function(){
+    this.style.animationPlayState= "paused"   // this.style.visibility="hidden";
+   this.style.transitionDelay="1s"; //
+   point_Poland.style.visibility="hidden";
+    info_Germany.style.visibility="visible";
+
+}
+point_Germany.onmouseout=function(){
+    this.style.animationPlayState= "running"  // this.style.visibility="visible";
+   info_Germany.style.transitionDelay="1s";
+    info_Germany.style.visibility="hidden";
+    point_Poland.style.visibility="visible";
+}
+point_Poland.onmouseover=function(){
+    this.style.animationPlayState= "paused"   // this.style.visibility="hidden";
+   this.style.transitionDelay="1s";
+    info_Poland.style.visibility="visible";
+
+}
+point_Poland.onmouseout=function(){
+    this.style.animationPlayState= "running"  // this.style.visibility="visible";
+   info_Germany.style.transitionDelay="1s";
+    info_Poland.style.visibility="hidden";
+}
+point_Spain.onmouseover=function(){
+    this.style.animationPlayState= "paused"   // this.style.visibility="hidden";
+   this.style.transitionDelay="1s";
+    info_Spain.style.visibility="visible";
+
+}
+point_Spain.onmouseout=function(){
+    this.style.animationPlayState= "running"  // this.style.visibility="visible";
+ this.style.transitionDelay="1s";
+    info_Spain.style.visibility="hidden";
+}
+point_Italy.onmouseover=function(){
+    this.style.animationPlayState= "paused"   // this.style.visibility="hidden";
+   this.style.transitionDelay="1s";
+    info_Italy.style.visibility="visible";
+
+}
+point_Italy.onmouseout=function(){
+    this.style.animationPlayState= "running"  // this.style.visibility="visible";
+  this.style.transitionDelay="1s";
+    info_Italy.style.visibility="hidden";
+}
+point_Bulgaria.onmouseover=function(){
+    this.style.animationPlayState= "paused"   // this.style.visibility="hidden";
+   this.style.transitionDelay="1s";
+    info_Bulgaria.style.visibility="visible";
+
+}
+point_Bulgaria.onmouseout=function(){
+    this.style.animationPlayState= "running"  // this.style.visibility="visible";
+  this.style.transitionDelay="1s";
+    info_Bulgaria.style.visibility="hidden";
+}
+}
+    </script>
+    <style>
+        #point_Bulgaria{width: 50px;
+            height:50px;
+            border-radius: 50px;
+            position:absolute;
+            top: 470px; left: 380px;
+            background-color: rgb(177, 34, 34);
+            animation: pulse2 5s infinite;
+      
+
+        }
+        #info_Bulgaria{ visibility: hidden;
+      width: 100px;
+      height: 100px;
+      position:absolute;
+            top: 463px; left: 387px;
+            background-color: rgb(130, 202, 35);
+            font-size: 20px;
+            color: rgb(22, 20, 20);
+            border-radius: 3px;
+
+        }
+        #point_Italy{width: 50px;
+            height:50px;
+            border-radius: 50px;
+            position:absolute;
+            top: 425px; left: 210px;
+            background-color: rgb(177, 34, 34);
+            animation: pulse 5s infinite;
+        
+
+        }
+        #info_Italy{ visibility: hidden;
+      width: 100px;
+      height: 100px;
+      position:absolute;
+            top: 423px; left: 223px;
+            background-color: rgb(202, 35, 188);
+            font-size: 20px;
+            color: rgb(22, 20, 20);
+            border-radius: 3px;
+
+        }
+        #point_Spain{width: 50px;
+            height:50px;
+            border-radius: 50px;
+            position:absolute;
+            top: 454px; left: 83px;
+            background-color: rgb(177, 34, 34);
+            animation: pulse 5s infinite;
+           
+
+        }
+        #info_Spain{ visibility: hidden;
+      width: 100px;
+      height: 100px;
+      position:absolute;
+            top: 440px; left: 90px;
+            background-color: rgb(238, 75, 0);
+            font-size: 20px;
+            color: rgb(22, 20, 20);
+            border-radius: 3px;
+
+        }
+        #point_Poland{ width: 50px;
+            height:50px;
+            border-radius: 50px;
+            position:absolute;
+            top: 365px; left: 337px;
+            background-color: green;
+            animation: pulse 5s infinite;
+         
+
+        }
+        #info_Poland{ visibility: hidden;
+      width: 100px;
+      height: 100px;
+      position:absolute;
+            top: 306px; left: 360px;
+            background-color: rgb(238, 75, 0);
+            font-size: 20px;
+            color: rgb(22, 20, 20);
+            border-radius: 3px;
+
+        }
+  #info_germany{
+      visibility: hidden;
+      width: 100px;
+      height: 100px;
+      position:absolute;
+            top: 300px; left: 280px;
+            background-color: rgb(0, 202, 238);
+            font-size: 20px;
+            color: rgb(22, 20, 20);
+            border-radius: 3px;
+  }
+        .point{ 
+            width: 50px;
+            height:50px;
+            border-radius: 50px;
+            position:absolute;
+            top: 360px; left: 250px;
+            background-color: green;
+            animation: pulse2 5s infinite;
+           
+            
+        }
+        img{
+            width: 700px;
+        }
+        @keyframes pulse {
+
+/*Ключевые кадры создаются с помощью ключевых слов from и to, или процентного соотношения времени*/
+from,
+to {
+
+    transform: scale(0.50);
+            background-color: rgb(160, 9, 140);
+            transition-delay: 1s;
+       
+
+}
+
+20% {
+    transform: scale(1);
+            background-color:rgb(235, 27, 96);
+
+}
+
+80%
+{ transform: scale(0.50);
+            background-color:rgb(27, 255, 6);
+            opacity: 50%;
+            
+        
+}
+
+}
+@keyframes pulse2 {
+
+/*Задаем другое название для анимации для того чтобы точки мигали неодинаково*/
+from,
+to {
+
+    transform: scale(0.50);
+            background-color: rgb(160, 82, 9);
+           
+       
+
+}
+
+50% {
+    transform: scale(1);
+            background-color:rgb(235, 27, 96);
+
+}
+
+70%
+{ transform: scale(0.50);
+            background-color:rgb(255, 6, 234);
+            opacity: 50%;
+            
+        
+}
+
+}
+    </style>
+</head>
+<body>
+    <div class="block">
+    X: <span class="x"></span><br>
+    Y: <span class="y"></span><br/>
+    <img src="map.jpg">
+
+    <div class="point" id="point_Germany"></div><br/>
+   <div id="info_germany">You can get a ticket to Hamburg by discount</div>
+
+<div id="point_Poland" ></div>
+<div id="info_Poland">You can get a ticket to Kraków by discount</div>
+
+<div id="point_Spain" ></div>
+<div id="info_Spain">You can get a ticket to Madrid by discount</div>
+<div id="point_Italy" ></div>
+<div id="info_Italy">You can get a ticket to Turin by discount</div>
+<div id="point_Bulgaria" ></div>
+<div id="info_Bulgaria">You can get a ticket to Sofia by discount</div>
+</div>
+</body>
+</html>
